@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hobbies - Jesse Blankenship</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Segoe UI, Arial, sans-serif;
+    background:#08162B;
+    color:white;
+    overflow-x:hidden;
+}
+
+.page{
+    position:relative;
+    z-index:2;
+    padding:80px 10%;
+}
+
+.header{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.header h1{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.header p{
+    color:#D8D8D8;
+}
+
+.hobby-section{
+    margin-bottom:80px;
+}
+
+.hobby-section h2{
+    font-size:2.3rem;
+    margin-bottom:15px;
+}
+
+.hobby-section p{
+    max-width:800px;
+    color:#D8D8D8;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:24px;
+}
+
+.gallery a{
+    display:block;
+}
+
+.gallery img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:18px;
+    box-shadow:0 0 25px rgba(0,0,0,.35);
+    transition:.25s ease;
+    cursor:pointer;
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+    box-shadow:0 0 35px rgba(0,0,0,.5);
+}
+
+.back-wrap{
+    text-align:center;
+    margin:80px 0 30px;
+}
+
+.back-btn{
+    display:inline-block;
+    text-decoration:none;
+    color:rgba(255,255,255,.8);
+    padding:12px 22px;
+    border-radius:10px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.back-btn:hover{
+    background:rgba(255,255,255,.11);
+    color:white;
+}
+
+.particle{
+    position:fixed;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    opacity:.10;
+    animation:float linear infinite;
+    z-index:1;
+}
+
+@keyframes float{
+    from{transform:translateY(100vh);}
+    to{transform:translateY(-100vh);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<div class="header">
+    <h1>Hobbies</h1>
+    <p>A few things I enjoy outside of school, work, and technology.</p>
+</div>
+
+<section class="hobby-section">
+
+    <h2>Painting</h2>
+
+    <p>
+        Painting has become one of my favorite creative outlets. I enjoy creating
+        landscapes, nature scenes, and abstract artwork as a way to relax and
+        express creativity outside of technology and fitness.
+    </p>
+
+    <div class="gallery">
+
+        <a href="IMAGES/SUN.jpg" target="_blank">
+            <img src="IMAGES/SUN.jpg" alt="">
+        </a>
+
+        <a href="IMAGES/MOON.jpg" target="_blank">
+            <img src="IMAGES/MOON.jpg" alt="">
+        </a>
+
+        <a href="IMAGES/LAKE.jpg" target="_blank">
+            <img src="IMAGES/LAKE.jpg" alt="">
+        </a>
+
+        <a href="IMAGES/FOUNTAIN.jpg" target="_blank">
+            <img src="IMAGES/FOUNTAIN.jpg" alt="">
+        </a>
+
+        <a href="IMAGES/SPACE.jpg" target="_blank">
+            <img src="IMAGES/SPACE.jpg" alt="">
+        </a>
+
+        <a href="IMAGES/TABLE.jpg" target="_blank">
+            <img src="IMAGES/TABLE.jpg" alt="">
+        </a>
+
+        <a href="IMAGES/BOTTLE.jpg" target="_blank">
+            <img src="IMAGES/BOTTLE.jpg" alt="">
+        </a>
+
+        <a href="IMAGES/CABIN.jpg" target="_blank">
+            <img src="IMAGES/CABIN.jpg" alt="">
+        </a>
+
+        <a href="IMAGES/WALL.jpg" target="_blank">
+            <img src="IMAGES/WALL.jpg" alt="">
+        </a>
+
+    </div>
+
+</section>
+
+<section class="hobby-section">
+
+    <h2>Hiking</h2>
+
+    <p>
+        Hiking allows me to stay active, explore new places, and enjoy the outdoors.
+    </p>
+
+    <div class="gallery">
+
+        <a href="IMAGES/HIKING PHOTO 1 SMILE.jpg" target="_blank">
+            <img src="IMAGES/HIKING PHOTO 1 SMILE.jpg" alt="">
+        </a>
+
+        <a href="IMAGES/HIKING PHOTO 2 LOOK OFF.jpg" target="_blank">
+            <img src="IMAGES/HIKING PHOTO 2 LOOK OFF.jpg" alt="">
+        </a>
+
+        <a href="IMAGES/HIKING PHOTO GREY SHIRT PIC 1.jpg" target="_blank">
+            <img src="IMAGES/HIKING PHOTO GREY SHIRT PIC 1.jpg" alt="">
+        </a>
+
+        <a href="IMAGES/HIKING PHOTO GREY SHIRT PIC 2.jpg" target="_blank">
+            <img src="IMAGES/HIKING PHOTO GREY SHIRT PIC 2.jpg" alt="">
+        </a>
+
+        <a href="IMAGES/Hiking New Photo.jpg" target="_blank">
+            <img src="IMAGES/Hiking New Photo.jpg" alt="">
+        </a>
+
+    </div>
+
+</section>
+    <section class="hobby-section">
+
+    <h2>Snowboarding</h2>
+
+    <p>
+        Snowboarding is one of my favorite winter activities and gives me a chance
+        to challenge myself while enjoying the outdoors.
+    </p>
+
+    <div class="gallery">
+
+        <a href="IMAGES/SNOWBOARDING SMILE PIC 1.jpg" target="_blank">
+            <img src="IMAGES/SNOWBOARDING SMILE PIC 1.jpg" alt="">
+        </a>
+
+        <a href="IMAGES/SNOWBOARDING LOOK OFF PIC.jpg" target="_blank">
+            <img src="IMAGES/SNOWBOARDING LOOK OFF PIC.jpg" alt="">
+        </a>
+
+        <a href="IMAGES/WINTER SMILE PIC 1.jpg" target="_blank">
+            <img src="IMAGES/WINTER SMILE PIC 1.jpg" alt="">
+        </a>
+
+        <a href="IMAGES/WINTER LOOK OFF PIC 1.jpg" target="_blank">
+            <img src="IMAGES/WINTER LOOK OFF PIC 1.jpg" alt="">
+        </a>
+
+        <a href="IMAGES/Snowboarding Active NEW.png" target="_blank">
+            <img src="IMAGES/Snowboarding Active NEW.png" alt="">
+        </a>
+
+    </div>
+
+</section>
+
+<section class="hobby-section">
+
+    <h2>Music</h2>
+
+    <p>
+        Music is another hobby I enjoy outside of technology and the outdoors.
+        I like spending time playing guitar and keyboard whenever I get the chance.
+    </p>
+
+    <div class="gallery">
+
+        <a href="IMAGES/Guitar.jpg" target="_blank">
+            <img src="IMAGES/Guitar.jpg" alt="Guitar">
+        </a>
+
+        <a href="IMAGES/Electric Guitar.png" target="_blank">
+            <img src="IMAGES/Electric Guitar.png" alt="Electric Guitar">
+        </a>
+
+        <a href="IMAGES/Guitar Floor.jpg" target="_blank">
+            <img src="IMAGES/Guitar Floor.jpg" alt="Guitar Collection">
+        </a>
+
+        <a href="IMAGES/Keyboard.jpg" target="_blank">
+            <img src="IMAGES/Keyboard.jpg" alt="Keyboard">
+        </a>
+
+    </div>
+
+</section>
+
+<section class="hobby-section">
+
+    <h2>Travel & Adventure</h2>
+
+    <p>
+        I enjoy traveling, getting outdoors, and trying new experiences.
+        Some of my favorite memories have come from exploring Puerto Rico,
+        including hiking through El Yunque National Forest, kayaking,
+        ziplining over the rainforest, horseback riding on the beach,
+        and walking through the streets of Old San Juan.
+    </p>
+
+    <div class="gallery">
+
+        <a href="IMAGES/Old SanJuan Smile 1.jpg" target="_blank">
+            <img src="IMAGES/Old SanJuan Smile 1.jpg" alt="Old San Juan">
+        </a>
+
+        <a href="IMAGES/el yunke smile pic 1.jpg" target="_blank">
+            <img src="IMAGES/el yunke smile pic 1.jpg" alt="El Yunque">
+        </a>
+
+        <a href="IMAGES/el yunke smile pic 2.jpg" target="_blank">
+            <img src="IMAGES/el yunke smile pic 2.jpg" alt="El Yunque">
+        </a>
+
+        <a href="IMAGES/el yunke waterfall.jpg" target="_blank">
+            <img src="IMAGES/el yunke waterfall.jpg" alt="Waterfall">
+        </a>
+
+        <a href="IMAGES/Zip Line Front angle.jpeg" target="_blank">
+            <img src="IMAGES/Zip Line Front angle.jpeg" alt="Ziplining">
+        </a>
+
+        <a href="IMAGES/Zip Line Side angel.jpeg" target="_blank">
+            <img src="IMAGES/Zip Line Side angel.jpeg" alt="Ziplining">
+        </a>
+
+        <a href="IMAGES/kayaking PR solo.jpg" target="_blank">
+            <img src="IMAGES/kayaking PR solo.jpg" alt="Kayaking">
+        </a>
+
+        <a href="IMAGES/horseback rideing smile pic 1.jpg" target="_blank">
+            <img src="IMAGES/horseback rideing smile pic 1.jpg" alt="Horseback Riding">
+        </a>
+
+    </div>
+
+</section>
+
+<div class="back-wrap">
+    <a href="index.html" class="back-btn">
+        ← Back to Home
+    </a>
+</div>
+
+</div>
+
+<script>
+for(let i=0;i<50;i++){
+    let particle=document.createElement("div");
+    particle.classList.add("particle");
+    particle.style.left=Math.random()*100+"vw";
+    particle.style.animationDuration=(12+Math.random()*20)+"s";
+    particle.style.opacity=Math.random()*0.18;
+    document.body.appendChild(particle);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact - Jesse Blankenship</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Segoe UI, Arial, sans-serif;
+    background:#08162B;
+    color:white;
+    overflow-x:hidden;
+}
+
+.page{
+    position:relative;
+    z-index:2;
+    width:min(1000px,90%);
+    margin:0 auto;
+    padding:80px 0;
+}
+
+.header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.header h1{
+    font-size:4rem;
+    margin-bottom:18px;
+}
+
+.header p{
+    max-width:760px;
+    margin:auto;
+    color:#D8D8D8;
+    line-height:1.8;
+    font-size:1.05rem;
+}
+
+.contact-layout{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:24px;
+    align-items:stretch;
+}
+
+.contact-card,
+.availability-card{
+    padding:34px;
+    border-radius:18px;
+    background:rgba(255,255,255,.055);
+    border:1px solid rgba(255,255,255,.10);
+    box-shadow:0 0 28px rgba(0,0,0,.24);
+}
+
+.contact-card h2,
+.availability-card h2{
+    font-size:1.8rem;
+    margin-bottom:25px;
+}
+
+.contact-item{
+    padding:18px 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.contact-item:last-child{
+    border-bottom:none;
+    padding-bottom:0;
+}
+
+.contact-label{
+    display:block;
+    color:rgba(255,255,255,.58);
+    font-size:.9rem;
+    margin-bottom:7px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+}
+
+.contact-value{
+    color:white;
+    font-size:1.08rem;
+    line-height:1.6;
+    text-decoration:none;
+    overflow-wrap:anywhere;
+}
+
+.contact-value:hover{
+    color:#D8D8D8;
+}
+
+.availability-time{
+    font-size:1.3rem;
+    line-height:1.6;
+    margin-bottom:22px;
+}
+
+.availability-card p{
+    color:#D8D8D8;
+    line-height:1.8;
+}
+
+.status{
+    margin-top:24px;
+    padding-top:24px;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+.status h3{
+    font-size:1.1rem;
+    margin-bottom:14px;
+}
+
+.status p{
+    margin-bottom:8px;
+}
+
+.closing{
+    text-align:center;
+    max-width:760px;
+    margin:65px auto 0;
+    color:#D8D8D8;
+    line-height:1.8;
+    font-size:1.05rem;
+}
+
+.back-wrap{
+    text-align:center;
+    margin:55px 0 20px;
+}
+
+.back-btn{
+    display:inline-block;
+    text-decoration:none;
+    color:rgba(255,255,255,.82);
+    padding:12px 23px;
+    border-radius:10px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.10);
+    transition:.25s ease;
+}
+
+.back-btn:hover{
+    color:white;
+    background:rgba(255,255,255,.12);
+}
+
+.particle{
+    position:fixed;
+    width:4px;
+    height:4px;
+    border-radius:50%;
+    background:rgba(255,255,255,.32);
+    box-shadow:0 0 7px rgba(255,255,255,.20);
+    pointer-events:none;
+    animation:float linear infinite;
+    z-index:1;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-120vh);
+    }
+}
+
+@media(max-width:800px){
+
+    .page{
+        width:92%;
+        padding:60px 0;
+    }
+
+    .header h1{
+        font-size:2.8rem;
+    }
+
+    .contact-layout{
+        grid-template-columns:1fr;
+    }
+
+    .contact-card,
+    .availability-card{
+        padding:26px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <header class="header">
+
+        <h1>Let's Connect</h1>
+
+        <p>
+            Thank you for taking the time to visit my portfolio. If you would like
+            to discuss career opportunities, internships, co-ops, or professional
+            networking, I would be happy to hear from you.
+        </p>
+
+    </header>
+
+    <main class="contact-layout">
+
+        <section class="contact-card">
+
+            <h2>Contact Information</h2>
+
+            <div class="contact-item">
+                <span class="contact-label">Personal Email</span>
+                <a class="contact-value"
+                   href="mailto:jesseblankenship9000@gmail.com">
+                    jesseblankenship9000@gmail.com
+                </a>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-label">University Email</span>
+                <a class="contact-value"
+                   href="mailto:blankej6@mail.uc.edu">
+                    blankej6@mail.uc.edu
+                </a>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-label">Phone</span>
+                <a class="contact-value"
+                   href="tel:+15136077574">
+                    (513) 607-7574
+                </a>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-label">Location</span>
+                <span class="contact-value">
+                    Cincinnati, Ohio
+                </span>
+            </div>
+
+        </section>
+
+        <section class="availability-card">
+
+            <h2>Availability</h2>
+
+            <div class="availability-time">
+                Monday – Friday<br>
+                9:00 AM – 5:00 PM EST
+            </div>
+
+            <p>
+                If I am unavailable, please feel free to send me a text message
+                or email, and I will respond as soon as I can.
+            </p>
+
+            <div class="status">
+
+                <h3>Current Status</h3>
+
+                <p>Open to full-time opportunities</p>
+                <p>Open to internships and co-ops</p>
+                <p>Open to professional networking</p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <p class="closing">
+        I appreciate your interest and look forward to connecting with you.
+    </p>
+
+    <div class="back-wrap">
+
+        <a href="index.html" class="back-btn">
+            ← Back to Home
+        </a>
+
+    </div>
+
+</div>
+
+<script>
+for(let i = 0; i < 45; i++){
+
+    const particle = document.createElement("div");
+    particle.className = "particle";
+
+    particle.style.left = Math.random() * 100 + "vw";
+    particle.style.top = Math.random() * 100 + "vh";
+
+    particle.style.animationDuration =
+        (30 + Math.random() * 25) + "s";
+
+    particle.style.animationDelay =
+        (-Math.random() * 30) + "s";
+
+    particle.style.opacity =
+        0.07 + Math.random() * 0.11;
+
+    document.body.appendChild(particle);
+}
+</script>
+
+</body>
+</html>
