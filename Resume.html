@@ -137,6 +137,21 @@ body{
         height:700px;
     }
 }
+
+.resume-preview{display:block;position:relative;width:100%;padding:0;border:0;background:white;cursor:zoom-in;color:#08162B;}
+.resume-preview img{display:block;width:100%;height:auto;}
+.zoom-hint{position:absolute;right:16px;bottom:16px;padding:10px 14px;border-radius:24px;background:#08162B;color:white;font:600 .9rem Segoe UI,Arial,sans-serif;box-shadow:0 2px 10px #0004;}
+.resume-preview:focus-visible,.zoom-toolbar button:focus-visible{outline:3px solid #70cfff;outline-offset:-4px;}
+.resume-dialog{width:96vw;max-width:none;height:94dvh;max-height:94dvh;margin:auto;padding:0;border:1px solid #ffffff40;border-radius:12px;background:#172338;color:white;overflow:hidden;}
+.resume-dialog::backdrop{background:#000c;}
+.zoom-toolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px;background:#08162B;}
+.zoom-toolbar button{padding:9px 12px;border:1px solid #ffffff50;border-radius:6px;background:#ffffff12;color:white;font:inherit;cursor:pointer;min-height:44px;}
+.zoom-toolbar button:disabled{opacity:.4;cursor:default;}
+.zoom-toolbar .close-zoom{margin-left:auto;}
+.zoom-viewport{height:calc(100% - 70px);overflow:auto;padding:16px;overscroll-behavior:contain;}
+.zoom-viewport img{display:block;width:var(--zoom,100%);max-width:none;height:auto;margin:0 auto;background:white;}
+@media(max-width:600px){.zoom-hint{right:8px;bottom:8px;font-size:.75rem;padding:8px 10px;}.zoom-toolbar{gap:5px;padding:8px;}.zoom-toolbar button{padding:8px;}.zoom-viewport{padding:8px;}}
+
 </style>
 </head>
 
@@ -158,16 +173,17 @@ body{
 
     <div class="resume-container">
 
-        <embed
-            src="IMAGES/Resume2026.pdf"
-            type="application/pdf">
+        <button type="button" class="resume-preview" id="open-resume" aria-label="Enlarge resume" aria-haspopup="dialog">
+            <img src="IMAGES/Resume2026-preview.png" alt="Jesse Blankenship resume, updated October 2026" width="1530" height="1980">
+            <span class="zoom-hint" aria-hidden="true">&#128269; Click or tap to zoom</span>
+        </button>
 
     </div>
 
     <div class="button-wrap">
 
         <a href="IMAGES/Resume2026.pdf"
-           download
+           download="Jesse_Blankenship_Resume_October_2026.pdf"
            class="resume-btn">
             Download Resume
         </a>
@@ -203,6 +219,44 @@ for(let i = 0; i < 50; i++){
     document.body.appendChild(particle);
 }
 
+</script>
+
+
+<dialog class="resume-dialog" id="resume-zoom" aria-labelledby="zoom-title">
+    <div class="zoom-toolbar">
+        <span id="zoom-title">Resume</span>
+        <button type="button" id="zoom-out" aria-label="Zoom out">&#8722;</button>
+        <output id="zoom-level" aria-live="polite">100%</output>
+        <button type="button" id="zoom-in" aria-label="Zoom in">+</button>
+        <button type="button" id="zoom-reset">Fit</button>
+        <button type="button" class="close-zoom" id="close-resume" autofocus>Close</button>
+    </div>
+    <div class="zoom-viewport"><img src="IMAGES/Resume2026-preview.png" alt="Enlarged resume of Jesse Blankenship"></div>
+</dialog>
+<script>
+(() => {
+    const dialog=document.getElementById('resume-zoom');
+    const image=dialog.querySelector('img');
+    const viewport=dialog.querySelector('.zoom-viewport');
+    const out=document.getElementById('zoom-out');
+    const inside=document.getElementById('zoom-in');
+    let zoom=100;
+    function setZoom(value){
+        zoom=Math.min(300,Math.max(100,value));
+        image.style.setProperty('--zoom',zoom+'%');
+        document.getElementById('zoom-level').textContent=zoom+'%';
+        out.disabled=zoom===100;
+        inside.disabled=zoom===300;
+    }
+    document.getElementById('open-resume').addEventListener('click',()=>{
+        setZoom(100);dialog.showModal();document.body.style.overflow='hidden';viewport.scrollTo(0,0);
+    });
+    out.addEventListener('click',()=>setZoom(zoom-25));
+    inside.addEventListener('click',()=>setZoom(zoom+25));
+    document.getElementById('zoom-reset').addEventListener('click',()=>{setZoom(100);viewport.scrollTo(0,0);});
+    document.getElementById('close-resume').addEventListener('click',()=>dialog.close());
+    dialog.addEventListener('close',()=>{document.body.style.overflow='';document.getElementById('open-resume').focus();});
+})();
 </script>
 
 </body>
